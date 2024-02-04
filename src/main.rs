@@ -61,20 +61,47 @@ use std::cmp::Ordering;
 // Arrays: Elements must be of the same type; and arrays have fixed size. 
 // arr.len for array length (note rust compiler is smart enough to auto-size itself)
 // looping through arrays: 
-fn main() {
-    let arr: [i32; 9] = [1, 2, 3, 4, 5, 6, 7, 8, 9]; 
-    println!("Arrays: {}", arr[0]); 
-    let mut loop_idx = 0; 
-    loop {
-        if arr[loop_idx] % 2 == 0 {
-            loop_idx += 1;
-            continue; 
-        }
-        if arr[loop_idx] == 9 {
-            break; 
-        }
-        println!("Values: {}", arr[loop_idx]);
-        loop_idx += 1;
-    }
-}
+// fn main() {
+    // let arr: [i32; 9] = [1, 2, 3, 4, 5, 6, 7, 8, 9]; 
+    // println!("Arrays: {}", arr[0]); 
+    // let mut loop_idx = 0; 
+//     loop {
+//         if arr[loop_idx] % 2 == 0 {
+//             loop_idx += 1;
+//             continue; 
+//         }
+//         if arr[loop_idx] == 9 {
+//             break; 
+//         }
+//         println!("Values: {}", arr[loop_idx]);
+//         loop_idx += 1;
+//     }
+// }
 
+// // Other Loops: While & For Loop
+// fn main() {
+//     let arr: [i32; 9] = [1, 2, 3, 4, 5, 6, 7, 8, 9]; 
+//     let mut loop_idx: usize = 0; 
+//     // while loop_idx < arr.len() {
+//     //     println!("{}", arr[loop_idx]);
+//     //     loop_idx += 1;
+//     // }
+//     for val in arr.iter() {
+//         println!("Val : {}", val); 
+//     }
+
+// }
+
+
+// // Tuples
+// fn main() {
+//     let my_tuple: (i32, String, bool) = (43, "Bitch".to_string(), true);
+//     if my_tuple.2 {
+//         println!("{0} please get me {1} {0}es",my_tuple.1, my_tuple.0);
+//     }
+//     // can also assign variables values form a tuple
+//     let (v1, v2, v3) = my_tuple; 
+
+// }
+
+// Strings
