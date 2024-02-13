@@ -4,7 +4,71 @@ use std::io;
 use rand::Rng; 
 use std::io::{Write, BufRead, BufReader, ErrorKind};
 use std::fs::File; 
-use std::cmp::Ordering; 
+use std::cmp::Ordering;
+
+
+// // TUTORIAL 1 : Std line stuff
+// fn main() {
+//     println!("What is your name?");
+//     let mut name: String = String::new();
+//     let greeting: &str = "Nice to meet you";
+//     io::stdin().read_line(&mut name)
+//         .expect("Didn't receive Input");
+
+//     println!("Hello {}, {}", name.trim_end(), greeting);
+// }
+
+// // TUTORIAL 2: Constants & Shadowing
+// fn main() {
+//     const ONE_MIL: u32 = 1_000_000;
+//     const PI: f32 = 3.141592;
+//     let age: &str  = "47";// Important for strings - single quotes for chars and double quotes for strings;
+//     // We can define variables with same name bu different data types (called shadowing)
+//     // .expect is error handling built in while coding
+//     let mut age: u32 = age.trim().parse()
+//         .expect("Age wasn't assigned a number");
+//     age = age + 1;
+//     println!("I'm {} and I want ${}", age, ONE_MIL);
+
+// }
+
+// // TUTORIAL 3: Data Types
+// fn main() {
+//     // Integers (for signed integers, just use i32, i64 etc.)
+//     // println!("Max u32: {}", u32::MAX);
+//     // println!("Max u64: {}", u64::MAX);
+//     // println!("Max u128: {}", u128::MAX);
+//     // println!("Max usize: {}", usize::MAX);
+//     // println!("Max f32: {}", f32::MAX);
+//     // println!("Max f64: {}", f64::MAX);
+
+//     // Booleans
+//     // let is_true: bool = true;  // false
+//     // // if we don't allow unused enabled;
+//     // //we can start a variable with an underscore to make the compiler ignore it
+//     // let my_grade: char = 'A';
+// }
+
+// TUTORIAL 4: Precision & Math
+// fn main() {
+    // let num_1: f32 = 1.111111111111;
+    // println!("f32: {}", num_1 + 0.1111111111111111);
+    // let num_2: f64 = 1.111111111111;
+    // println!("f64: {}", num_2 + 0.1111111111111111);
+
+    // let num_3: u32 = 5;
+    // let num_4: u32 = 4;
+    // let mut num_5: u32 = 5;
+    // println!{"5 + 4 = {}", num_3 + num_4};
+    // println!{"5 - 4 = {}", num_3 - num_4};
+    // println!{"5 * 4 = {}", num_3 * num_4};
+    // println!{"5 / 4 = {}", num_3 / num_4};
+    // println!{"5 % 4 = {}", num_3 % num_4};
+    // num_5 += 1;
+    // println!("{}",num_5)
+
+    // let random_num:
+
 
 // Random Utility
 // fn main() {
@@ -100,8 +164,8 @@ use std::cmp::Ordering;
 //         println!("{0} please get me {1} {0}es",my_tuple.1, my_tuple.0);
 //     }
 //     // can also assign variables values form a tuple
-//     let (v1, v2, v3) = my_tuple; 
-
+//     let (v1, v2, v3) = my_tuple;
+//
 // }
 
 // Strings
