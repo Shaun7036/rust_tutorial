@@ -169,3 +169,80 @@ use std::cmp::Ordering;
 // }
 
 // Strings
+// fn main() {
+//     // // two types of strings
+//     // // String : vector of bytes 
+//     // // &str: points to string 
+//     // let mut st1 = String::new(); // created a empty gorwable string 
+//     // st1.push('A');
+//     // st1.push_str(" word");
+//     // for word in st1.split_whitespace(){
+//     //     println!("{}", word);
+//     // }
+//     // let st2 = st1.replace("A", "Another");
+//     // println!("{}", st2);
+
+//     // Lets create string of random values
+//     let st3 = String::from("x r t a d g r g s v s g");
+//     let mut v1: Vec<char> = st3.chars().collect();
+//     v1.sort();
+//     v1.dedup();
+//     for char in v1 {
+//         println!("{}",char);
+//     }
+
+//     let st4: &str = "Random String"; // Creates a string literal
+//     let mut st5: String = st4.to_string(); // Converts to heap-allocated string 
+//     println!("{}", st5);
+
+//     // String into array of bytes
+//     let byte_arr1 = st5.as_bytes();
+//     let st6 = &st5[0..6]; // get a slice of the array; note does not select 6th cahracter
+//     println!("String Length: {}", st6.len());
+
+//     // delete values in string (if muttable)
+//     st5.clear();
+
+//     // combine strings
+//     let st6 = String::from("Just some");
+//     let st7 = String::from(" words");
+//     let st8 = st6 + &st7; // done like this; note st6 will nto exist after this but st7 will as it was pass-by-reference. 
+//     for char in st8.bytes() {
+//         println!("{}",char); // This prints the values out as unicdoe
+//     }
+
+
+// }
+
+// CASTING: can convert types in a whole lot of different ways. 
+// fn main() {
+//     let int_u8: u8 = 5; 
+//     let int2_u8: u8 = 4; //normal cast typing
+//     let int3_u32: u32 = (int_u8 as u32) + (int2_u8 as u32); //using as to cast to different types
+// }
+
+// ENUMS: custome data types with imited number of potential values 
+fn main() {
+    enum Day {
+        Monday, 
+        Tuesday, 
+        Wednesday, 
+        Thursday, 
+        Friday, 
+        Saturday, 
+        Sunday
+
+    }
+    // we can define functions for enum types as well
+    impl Day {
+        fn is_weekend(&self) -> bool {
+            match self {
+                Day::Saturday | Day::Sunday => true,
+                _ => false
+            }
+        }
+    }
+    let today:Day = Day::Monday;
+    println!("{}",today.is_weekend());
+    // println!("{}",Days);
+}
